@@ -1,0 +1,290 @@
+$overlay-bg: rgba(3, 5, 8, 0.3);
+$blur-amount: 5px;
+$menu-transition-duration: 0.4s;
+$primary-color: #FFBD00;
+
+.burger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  z-index: 100;
+  padding: 0;
+  margin-right: 24px;
+
+  @media (max-width: 1024px) {
+    display: inline-block;
+  }
+
+  span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px auto;
+    border-radius: 2px;
+    transition: transform .3s, opacity .3s;
+
+    &:nth-child(1) {
+      transform-origin: left center;
+    }
+
+    &:nth-child(2) {
+      transform-origin: center center;
+    }
+
+    &:nth-child(3) {
+      transform-origin: left center;
+    }
+  }
+
+  &.burger-btn--active {
+    span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
+
+// =================== OVERLAY =================================
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: $overlay-bg;
+  backdrop-filter: blur($blur-amount);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+
+  &.mobile-nav-overlay--visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// =================== MOBILE MENU =============================
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background-color: var(--header-background-color, $neutral-800);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, .2);
+  transform: translateX(-110%);
+  transition: transform $menu-transition-duration ease,
+  opacity $menu-transition-duration ease;
+  opacity: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+
+  &.mobile-menu--open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .mobile-menu__buttons-row {
+    margin-bottom: 24px;
+
+    @media only screen and (min-width: 1025px) {
+      .header-buttons {
+        display: none;
+      }
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 16px;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: center;
+
+      .btn {
+        flex: 1;
+        gap: $Basics-16;
+      }
+    }
+  }
+
+  .mobile-menu__top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: $Basics-16;
+    border-bottom: 1px solid $neutral-800;
+    margin-bottom: 24px;
+
+    .mobile-menu__logo img {
+      max-height: 32px;
+      width: auto;
+    }
+
+    .mobile-menu__close {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: transform .3s ease;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        transform-origin: center;
+      }
+
+      span:nth-child(1) {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+
+  .mobile-menu__inner {
+    .mobile-menu__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid $neutral-800;
+      padding-bottom: $Basics-16;
+
+      li {
+        position: relative;
+        padding: 0;
+
+        &::before {
+          content: none;
+        }
+
+        &.menu-item-has-children {
+          > a {
+            &::after {
+              content: '';
+              display: inline-block;
+              width: 7px;
+              height: 7px;
+              border-right: 1px solid var(--header-menu-color, $header-menu-color);
+              border-bottom: 1px solid var(--header-menu-color, $header-menu-color);
+              transform: rotate(-45deg) translateY(-50%);
+              position: absolute;
+              right: 16px;
+              top: 50%;
+              transition: all .3s ease-in-out;
+            }
+          }
+        }
+
+        .submenu-trigger--active {
+          color: var(--header-menu-hover-color, $header-menu-hover-color);
+          background-color: var(--dropdown-bg-color, $dropdown-bg-color);
+          margin-bottom: 8px;
+          transition: all .3s ease-in-out;
+
+          svg {
+            path {
+              fill: var(--header-menu-hover-color, $header-menu-hover-color);
+            }
+          }
+
+          &::after {
+            transform: rotate(45deg) translateY(-50%) !important;
+          }
+        }
+
+        &:hover {
+          > a {
+            color: var(--header-menu-hover-color, $header-menu-hover-color);
+            background-color: var(--dropdown-bg-color, $dropdown-bg-color);
+
+            svg {
+              path {
+                fill: var(--header-menu-hover-color, $header-menu-hover-color);
+              }
+            }
+          }
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          padding: 10px 12px;
+          border-radius: 10px;
+          color: var(--header-menu-color, $header-menu-color);
+          position: relative;
+
+          svg {
+            max-width: 20px;
+            max-height: 20px;
+
+            path {
+              fill: var(--header-menu-color, $header-menu-color);
+            }
+          }
+
+          &:nth-last-child(1) {
+            margin: 0;
+          }
+        }
+
+        .sub-menu {
+          display: none;
+          padding: 10px;
+          margin-top: 0;
+          border-radius: $Basics-16;
+          border: 1px solid var(--dropdown-bg-color, $dropdown-bg-color);
+
+          a {
+            &:has(+ul) {
+              padding-right: 40px;
+
+              &::after {
+                content: '';
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-right: 1px solid var(--header-menu-color, $header-menu-color);
+                border-bottom: 1px solid var(--header-menu-color, $header-menu-color);
+                transform: rotate(-45deg);
+                position: absolute;
+                right: 16px;
+                top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    max-width: 50%;
+    padding: 24px 16px;
+  }
+
+  @media only screen and (max-width: 641px) {
+    max-width: 100%;
+  }
+}

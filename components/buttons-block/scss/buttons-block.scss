@@ -1,0 +1,17 @@
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  &--left {
+    justify-content: flex-start;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+}

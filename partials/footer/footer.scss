@@ -1,0 +1,350 @@
+// footer.scss
+@import "inc/scss/base/variables.scss";
+
+.site-footer {
+  background-color: var(--footer-background-color, $footer-background-color);
+  border-top: 1px solid var(--borders-color, $borders-color);
+  padding: 0 44px 24px;
+
+  @media only screen and (max-width: 1440px) {
+    padding: 0 24px 24px;
+  }
+
+  .footer-row {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+
+    &.footer-row-1 {
+      @media only screen and (max-width: 1024px) {
+        flex-wrap: wrap;
+        gap: 0;
+      }
+    }
+
+    &.footer-row-2 {
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid var(--borders-color, $borders-color);
+
+      @media only screen and (max-width: 640px) {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+    }
+
+    &.footer-row-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0;
+      gap: 0;
+      border-top: 1px solid var(--borders-color, $borders-color);
+      padding: 20px 0 0;
+    }
+  }
+
+  .footer-col {
+    min-width: 0;
+    flex: 1;
+    padding: 24px 24px 24px 0;
+
+    .footer__title {
+      margin: 0 0 24px;
+    }
+
+    &.footer-col-about, &.footer-col-bonus, &.footer-col-info {
+      border-right: 1px solid var(--borders-color, $borders-color);
+    }
+
+    &.footer-col-logo {
+      max-width: 466px;
+      border-right: 1px solid var(--borders-color, $borders-color);
+      flex-basis: min-content;
+
+      @media only screen and (max-width: 1100px) and (min-width: 1025px) {
+        flex: 1;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        order: -1;
+        flex: 1 1 100%;
+        max-width: 100%;
+        border-right: none;
+        padding: $Basics-16 0;
+        border-bottom: 1px solid var(--borders-color, $borders-color);
+        flex-direction: row;
+        display: flex;
+
+        .footer-social-icons {
+          order: 3;
+        }
+
+        .footer-description {
+          flex: 1;
+          padding: 0 $Basics-16;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        gap: $Basics-16;
+
+        .footer-description {
+          order: 3;
+          flex: 1 1 100%;
+          padding: 0;
+        }
+
+        .footer-social-icons {
+          justify-content: flex-end;
+          gap: 16px;
+          margin-bottom: 0;
+        }
+
+        .custom-logo-link,
+        .footer-social-icons {
+          flex: 1 1 calc(25% - 12px);
+          order: 0;
+        }
+      }
+
+      .custom-logo {
+        height: auto;
+        margin-bottom: 23px;
+
+        @media only screen and (max-width: 768px) {
+          margin-bottom: 0;
+        }
+      }
+
+      .footer-description {
+        color: var(--footer-text-color, $footer-text-color);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0;
+        text-transform: none;
+      }
+    }
+
+    &.footer-col-about,
+    &.footer-col-bonus,
+    &.footer-col-info,
+    &.footer-col-app {
+      @media only screen and (max-width: 1024px) {
+        flex: 1 1 calc(25% - 12px);
+        padding: $Basics-16;
+      }
+
+      @media only screen and (max-width: 640px) {
+        flex: 1 1 100%;
+        text-align: center;
+        border: none;
+        padding: $Basics-16 0 0;
+      }
+    }
+
+    .footer-menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 0;
+
+        &::before {
+          content: none;
+        }
+
+        &:nth-last-child(1) {
+          a {
+            padding: 0;
+          }
+        }
+      }
+
+      li a {
+        text-decoration: none;
+        display: block;
+        margin: 0;
+        padding: 0 0 24px;
+        transition: all .25s ease-in-out;
+
+        &:hover {
+          color: var(--primary-color, $primary-color);
+        }
+      }
+    }
+
+    &.footer-col-app {
+      max-width: 538px;
+      flex-basis: min-content;
+
+      @media only screen and (max-width: 1100px) and (min-width: 1025px) {
+        flex: 1;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        flex: 1 1 calc(25% - 12px);
+      }
+
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 100%;
+        flex-wrap: wrap;
+        max-width: 100%;
+        border-top: 1px solid var(--borders-color, $borders-color);
+      }
+
+      .footer__title {
+        @media only screen and (max-width: 768px) {
+          flex: 1 1 50%;
+        }
+
+        @media only screen and (max-width: 640px) {
+          flex: 1 1 100%;
+          text-align: center;
+        }
+      }
+
+      .footer-app-logos {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 24px;
+
+        @media only screen and (max-width: 1100px) and (min-width: 1025px) {
+          flex-direction: column;
+        }
+
+        @media only screen and (max-width: 768px) {
+          flex: 1 1 50%;
+          justify-content: flex-end;
+        }
+
+        @media only screen and (max-width: 640px) {
+          flex: 1 1 100%;
+          justify-content: space-between;
+          gap: $Basics-16;
+
+          a {
+            flex: 1 1 100%;
+
+            img {
+              max-height: 100%;
+            }
+          }
+        }
+
+        img {
+          max-height: 45px;
+          width: 100%;
+        }
+      }
+
+      .footer-app-text {
+        color: var(--footer-text-color, $footer-text-color);
+        margin-bottom: 24px;
+
+        @media only screen and (max-width: 768px) {
+          flex: 1 1 100%;
+        }
+      }
+
+      .footer-app-button {
+        .btn {
+          width: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+          flex: 1 1 100%;
+        }
+
+        @media only screen and (max-width: 640px) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    &.footer-col-info {
+      @media only screen and (max-width: 768px) {
+        border: none;
+      }
+    }
+  }
+
+  .footer-partners {
+    gap: 36px;
+    padding: 23px 0;
+
+    .partner-logo {
+      display: inline-block;
+      margin: 0 5px;
+
+      @media only screen and (max-width: 640px) {
+        margin: 0;
+      }
+
+      img {
+        max-height: 40px;
+        width: auto;
+        transition: transform .3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .footer-disclaimer,
+  .footer-copyright {
+    color: var(--footer-copy-color, $footer-copy-color);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    gap: 25px;
+    margin: 0 0 24px;
+
+    @media only screen and (max-width: 1100px) and (min-width: 1025px) {
+      gap: 15px;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      text-decoration: none;
+
+      .social-icon-inner {
+        width: 44px;
+        height: 44px;
+        padding: 12px;
+        border-radius: $Basics-12;
+        border: 1px solid var(--icon-color-border, $icon-color-border);
+        background-color: var(--icon-color-bg, $icon-color-bg);
+
+        svg {
+          display: block;
+          width: 100%;
+          height: auto;
+
+          path {
+            stroke: var(--icon-color, $icon-color);
+            transition: all .25s ease-in-out;
+          }
+        }
+      }
+
+      &:hover .social-icon-inner svg path {
+        stroke: $body-background-color;
+      }
+    }
+  }
+}

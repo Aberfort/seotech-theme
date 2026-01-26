@@ -1,0 +1,279 @@
+// _variables.scss
+
+// 1) Base Palette
+// --------------------------------------------------
+$white: #fff !default;
+$black: #000 !default;
+$gray-600: #414349 !default;
+$gray-650: #656A75 !default;
+$dark-900: #111111 !default;
+$dark-950: #030508 !default;
+$navy-700: #1c3654 !default;
+$navy-800: #14273E !default;
+$navy-900: #0D1826 !default;
+$brand-yellow: #FFBD00 !default;
+$brand-red: #FC1418 !default;
+$blue-700: #2E4A6B !default;
+$blue-650 : #456487 !default;
+$blue-600: #a9bdd1 !default;
+$neutral-50: #E4E9F1 !default;
+
+
+// --------------------------------------------------
+
+$primary-color: $brand-yellow !default;
+$secondary-color: $brand-red !default;
+$neutral-800: $navy-800 !default;
+$body-background-color: $white !default;
+
+// 3) Body text, etc.
+$body-font-family: 'Open Sans', sans-serif !default;
+$body-font-size: 16px !default;
+$body-line-height: 1.5 !default;
+$body-letter-spacing: 0 !default;
+$body-text-transform: none !default;
+$body-text-color: #fff !default;
+$borders-color: $navy-700 !default;
+$scroll-bg-color: $gray-600 !default;
+$scroll-color: $navy-700 !default;
+
+// 4) Links
+$links-color: $blue-600 !default;
+$links-hover-color: $brand-yellow !default;
+
+// 5) Header
+$header-background-color: $dark-900 !default;
+$header-menu-font-size: 20px !default;
+$dropdown-bg-color: $navy-900 !default;
+$dropdown-bg-hover-color: $navy-800 !default;
+$header-menu-color: $white !default;
+$header-menu-hover-color: $white !default;
+$login-btn-bg-color: $blue-700 !default;
+$register-btn-bg-color: $brand-red !default;
+$login-btn-text-color: $white !default;
+$register-btn-text-color: $white !default;
+
+// 6) Footer
+$footer-background-color: $dark-950 !default;
+$icon-color: $blue-600 !default;
+$icon-color-bg: $navy-900 !default;
+$icon-color-border: $blue-700 !default;
+$footer-text-color: $blue-600 !default;
+$footer-copy-color: $blue-650 !default;
+
+// 7) Buttons fallback
+//    PRIMARY
+$btn-primary-color: $brand-yellow !default;
+$btn-primary-hover-color: darken($brand-yellow, 20%) !default;
+$btn-primary-focus-color: darken($brand-yellow, 20%) !default;
+$btn-primary-active-color: darken($brand-yellow, 35%) !default;
+$btn-primary-disabled-color: $gray-650 !default;
+
+$btn-primary_text-color: $navy-900 !default;
+$btn-primary_text-hover-color: $navy-900 !default;
+$btn-primary_text-focus-color: $navy-900 !default;
+$btn-primary_text-active-color: $navy-900 !default;
+$btn-primary_text-disabled-color: $gray-600 !default;
+
+//    SECONDARY
+$btn-secondary-color: $brand-red !default;
+$btn-secondary-hover-color: #D90306 !default;
+$btn-secondary-focus-color: #A60205 !default;
+$btn-secondary-active-color: #A60205 !default;
+$btn-secondary-disabled-color: $gray-650 !default;
+
+$btn-secondary_text-color: #FCFCFD !default;
+$btn-secondary_text-hover-color: #FCFCFD !default;
+$btn-secondary_text-focus-color: #FCFCFD !default;
+$btn-secondary_text-active-color: #FCFCFD !default;
+$btn-secondary_text-disabled-color: $gray-600 !default;
+
+//    DEFAULT
+$btn-default-color: $blue-700 !default;
+$btn-default-hover-color: $navy-800 !default;
+$btn-default-focus-color: $navy-800 !default;
+$btn-default-active-color: $navy-700 !default;
+$btn-default-disabled-color: $gray-650 !default;
+
+$btn-default_text-color: #FCFCFD !default;
+$btn-default_text-hover-color: #FCFCFD !default;
+$btn-default_text-focus-color: #FCFCFD !default;
+$btn-default_text-active-color: #FCFCFD !default;
+$btn-default_text-disabled-color: $gray-600 !default;
+
+//    BORDERED
+$btn-bordered-color: $brand-yellow !default;
+$btn-bordered-hover-color: darken($brand-yellow, 20%) !default;
+$btn-bordered-focus-color: darken($brand-yellow, 20%) !default;
+$btn-bordered-active-color: darken($brand-yellow, 35%) !default;
+$btn-bordered-disabled-color: #1C1B1E !default;
+
+// 8) Headings
+$h1-font-family: 'Open Sans', sans-serif !default;
+$h1-font-size: 40px !default;
+$h1-line-height: 1.2 !default;
+$h1-letter-spacing: 0 !default;
+$h1-text-transform: none !default;
+$h1-color: $black !default;
+
+$h2-font-family: 'Open Sans', sans-serif !default;
+$h2-font-size: 32px !default;
+$h2-line-height: 1.2 !default;
+$h2-letter-spacing: 0 !default;
+$h2-text-transform: none !default;
+$h2-color: #111 !default;
+
+$h3-font-family: 'Open Sans', sans-serif !default;
+$h3-font-size: 26px !default;
+$h3-line-height: 1.2 !default;
+$h3-letter-spacing: 0 !default;
+$h3-text-transform: none !default;
+$h3-color: #111 !default;
+
+$h4-font-family: 'Open Sans', sans-serif !default;
+$h4-font-size: 24px !default;
+$h4-line-height: 1.2 !default;
+$h4-letter-spacing: 0 !default;
+$h4-text-transform: none !default;
+$h4-color: #111 !default;
+
+// 9) Layout
+$container-width: 1440px !default;
+$section-padding: 60px !default;
+
+// 10) Basics
+$Basics-8: 8px !default;
+$Basics-12: 12px !default;
+$Basics-16: 16px !default;
+
+
+// --------------------------------------------------
+// :root Custom Properties
+// --------------------------------------------------
+:root {
+  /* Body */
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --body-background-color: #{$body-background-color};
+  --body-font-family: #{$body-font-family};
+  --body-font-size: #{$body-font-size};
+  --body-line-height: #{$body-line-height};
+  --body-letter-spacing: #{$body-letter-spacing};
+  --body-text-transform: #{$body-text-transform};
+  --body-text-color: #{$body-text-color};
+  --borders-color: #{$borders-color};
+  --scroll-bg-color: #{$scroll-bg-color};
+  --scroll-color: #{$scroll-color};
+
+  /* H1 */
+  --h1-font-family: #{$h1-font-family};
+  --h1-font-size: #{$h1-font-size};
+  --h1-line-height: #{$h1-line-height};
+  --h1-letter-spacing: #{$h1-letter-spacing};
+  --h1-text-transform: #{$h1-text-transform};
+  --h1-color: #{$h1-color};
+
+  /* H2 */
+  --h2-font-family: #{$h2-font-family};
+  --h2-font-size: #{$h2-font-size};
+  --h2-line-height: #{$h2-line-height};
+  --h2-letter-spacing: #{$h2-letter-spacing};
+  --h2-text-transform: #{$h2-text-transform};
+  --h2-color: #{$h2-color};
+
+  /* H3 */
+  --h3-font-family: #{$h3-font-family};
+  --h3-font-size: #{$h3-font-size};
+  --h3-line-height: #{$h3-line-height};
+  --h3-letter-spacing: #{$h3-letter-spacing};
+  --h3-text-transform: #{$h3-text-transform};
+  --h3-color: #{$h3-color};
+
+  /* H4 */
+  --h4-font-family: #{$h4-font-family};
+  --h4-font-size: #{$h4-font-size};
+  --h4-line-height: #{$h4-line-height};
+  --h4-letter-spacing: #{$h4-letter-spacing};
+  --h4-text-transform: #{$h4-text-transform};
+  --h4-color: #{$h4-color};
+
+  /* Layout */
+  --container-width: #{$container-width};
+  --section-padding: #{$section-padding};
+
+  /* Header */
+  --header-background-color: #{$header-background-color};
+  --header-menu-font-size: #{$header-menu-font-size};
+  --dropdown-bg-color: #{$dropdown-bg-color};
+  --dropdown-bg-hover-color: #{$dropdown-bg-hover-color};
+  --header-menu-color: #{$header-menu-color};
+  --header-menu-hover-color: #{$header-menu-hover-color};
+  --login-btn-bg-color: #{$login-btn-bg-color};
+  --register-btn-bg-color: #{$register-btn-bg-color};
+  --login-btn-text-color: #{$login-btn-text-color};
+  --register-btn-text-color: #{$register-btn-text-color};
+
+  /* Links */
+  --links-color: #{$links-color};
+  --links-hover-color: #{$links-hover-color};
+
+  /* Buttons: Primary */
+  --btn-primary-color: #{$btn-primary-color};
+  --btn-primary-hover-color: #{$btn-primary-hover-color};
+  --btn-primary-focus-color: #{$btn-primary-focus-color};
+  --btn-primary-active-color: #{$btn-primary-active-color};
+  --btn-primary-disabled-color: #{$btn-primary-disabled-color};
+
+  --btn-primary_text-color: #{$btn-primary_text-color};
+  --btn-primary_text-hover-color: #{$btn-primary_text-hover-color};
+  --btn-primary_text-focus-color: #{$btn-primary_text-focus-color};
+  --btn-primary_text-active-color: #{$btn-primary_text-active-color};
+  --btn-primary_text-disabled-color: #{$btn-primary_text-disabled-color};
+
+  /* Buttons: Secondary */
+  --btn-secondary-color: #{$btn-secondary-color};
+  --btn-secondary-hover-color: #{$btn-secondary-hover-color};
+  --btn-secondary-focus-color: #{$btn-secondary-focus-color};
+  --btn-secondary-active-color: #{$btn-secondary-active-color};
+  --btn-secondary-disabled-color: #{$btn-secondary-disabled-color};
+
+  --btn-secondary_text-color: #{$btn-secondary_text-color};
+  --btn-secondary_text-hover-color: #{$btn-secondary_text-hover-color};
+  --btn-secondary_text-focus-color: #{$btn-secondary_text-focus-color};
+  --btn-secondary_text-active-color: #{$btn-secondary_text-active-color};
+  --btn-secondary_text-disabled-color: #{$btn-secondary_text-disabled-color};
+
+  /* Buttons: Default */
+  --btn-default-color: #{$btn-default-color};
+  --btn-default-hover-color: #{$btn-default-hover-color};
+  --btn-default-focus-color: #{$btn-default-focus-color};
+  --btn-default-active-color: #{$btn-default-active-color};
+  --btn-default-disabled-color: #{$btn-default-disabled-color};
+
+  --btn-default_text-color: #{$btn-default_text-color};
+  --btn-default_text-hover-color: #{$btn-default_text-hover-color};
+  --btn-default_text-focus-color: #{$btn-default_text-focus-color};
+  --btn-default_text-active-color: #{$btn-default_text-active-color};
+  --btn-default_text-disabled-color: #{$btn-default_text-disabled-color};
+
+  /* Buttons: Bordered */
+  --btn-bordered-color: #{$btn-bordered-color};
+  --btn-bordered-hover-color: #{$btn-bordered-hover-color};
+  --btn-bordered-focus-color: #{$btn-bordered-focus-color};
+  --btn-bordered-active-color: #{$btn-bordered-active-color};
+  --btn-bordered-disabled-color: #{$btn-bordered-disabled-color};
+
+  /* Footer */
+  --footer-background-color: #{$footer-background-color};
+  --icon-color: #{$icon-color};
+  --icon-color-bg: #{$icon-color-bg};
+  --icon-color-border: #{$icon-color-border};
+  --footer-menu-hover-color: #{$primary-color};
+  --footer-text-color: #{$footer-text-color};
+  --footer-copy-color: #{$footer-copy-color};
+
+  /* Basics */
+  --Basics-8: #{$Basics-8};
+  --Basics-12: #{$Basics-12};
+  --Basics-16: #{$Basics-16};
+}

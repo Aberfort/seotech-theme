@@ -1,0 +1,8 @@
+{
+	"main": ["whatwg-fetch", "/entry-points-description/main.js"],
+	"homePage": ["/entry-points-description/home-page.js"],
+	"critical": ["/entry-points-description/critical.js"],
+	"templatePage": ["/entry-points-description/template-page.js"],
+	"404": ["/entry-points-description/404-page.js"],
+	"postPage": ["/entry-points-description/post-page.js"]
+}

@@ -1,0 +1,151 @@
+@import 'inc/scss/base/variables.scss';
+
+.banner {
+  display: flex;
+  align-items: stretch;
+  padding: 0 0 0 49px;
+  border-radius: 24px;
+  width: 100%;
+  position: relative;
+  border: 1px solid var(--borders-color, $borders-color);
+
+  &.banner__image--center {
+    .banner__image {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .banner__content {
+      max-width: 440px;
+    }
+  }
+
+  &.banner__image--right {
+    .banner__image {
+      right: 0;
+    }
+  }
+
+  &.banner--with-text-bg {
+    .banner__content {
+      background-color: rgba(20, 39, 62, .60);
+      border-radius: 16px;
+    }
+  }
+
+  &.banner--bg-solid {
+    background-color: darken($icon-color-bg, 5%);
+  }
+
+  &.banner--bg-gradient {
+    background: linear-gradient(135deg, $neutral-800 0%, #0a0f1e 100%);
+  }
+
+  &__content {
+    margin: 49px 0;
+    padding: 32px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--borders-color, $borders-color);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    img {
+      max-width: 154px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    margin: 32px 0 10px;
+
+    * {
+      color: inherit;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    font-size: 64px;
+    font-weight: 700;
+  }
+
+  &__bonus {
+    margin: 10px 0;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+
+    &.banner__image--square {
+      img {
+        width: 450px;
+        height: 450px;
+      }
+    }
+
+    &.banner__image--rectangular {
+      img {
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+
+    &.banner__image--right {
+      .banner__image {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &.banner__image--center {
+      .banner__content {
+        max-width: 100%;
+      }
+    }
+
+    .logo {
+      justify-content: center;
+    }
+
+    &__content {
+      margin: 287px 0 0;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__buttons {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}

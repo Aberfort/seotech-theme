@@ -1,0 +1,20 @@
+{
+  "name": "SeoTech",
+  "slug": "seotech",
+  "version": "1.0.54",
+  "download_url": "https://stageseotech.t42it.info/wp-content/themes/seotech.zip",
+  "last_updated": "2025-04-24",
+  "requires": "6.0",
+  "requires_php": "7.4",
+  "tested": "6.3",
+  "author": "Serhii Vasyliev",
+  "sections": {
+    "description": "Опис оновленої теми",
+    "installation": "Як встановлювати",
+    "changelog": "Що змінилось"
+  },
+  "banners": {
+    "low": "https://stageseotech.t42it.info/wp-content/themes/seotech/screenshot.png",
+    "high": "https://stageseotech.t42it.info/wp-content/themes/seotech/screenshot.png"
+  }
+}

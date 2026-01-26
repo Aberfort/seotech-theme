@@ -1,0 +1,147 @@
+@import 'inc/scss/base/variables.scss';
+
+.sc-toc-chips-wrapper {
+  position: relative;
+
+  &.sc-toc-mode-numbers {
+    .sc-toc-chips-container {
+      counter-reset: toc-counter;
+      display: block;
+    }
+
+    .sc-toc-chip {
+      display: block;
+      margin-bottom: $Basics-16;
+      background-color: transparent;
+      position: relative;
+      padding-left: 30px;
+
+      counter-increment: toc-counter;
+
+      &:before {
+        content: counter(toc-counter) ".";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &.sc-toc-mode-bullet {
+    .sc-toc-chips-container {
+      display: block;
+    }
+
+    .sc-toc-chip {
+      display: block;
+      margin-bottom: $Basics-16;
+      background-color: transparent;
+      position: relative;
+      padding-left: $Basics-16;
+
+      &.sc-toc-lvl-3 {
+        padding-left: 30px;
+
+        &::before {
+          content: "\25CB";
+          left: 16px;
+          font-size: 16px;
+        }
+      }
+
+      &:before {
+        content: "\2022";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 26px;
+      }
+    }
+  }
+
+  &.sc-toc-mode-chips {
+    .sc-toc-chips-container {
+      display: flex;
+      gap: $Basics-16;
+    }
+
+    .sc-toc-chip {
+      display: inline-block;
+      background-color: $navy-800;
+      color: $blue-600;
+      text-decoration: none;
+      padding: $Basics-8 $Basics-16;
+      border-radius: 12px;
+      font-size: 16px;
+      transition: background-color .3s ease;
+      border: 1px solid var(--borders-color, $borders-color);
+
+      &:hover {
+        color: var(--primary-color, $primary-color);
+      }
+    }
+  }
+
+  &.sc-toc-mode-list {
+    .sc-toc-chips-container {
+      display: block;
+      border-left: 1px solid var(--borders-color, $borders-color);
+      padding-left: $Basics-16;
+    }
+
+    .sc-toc-chip {
+      display: block;
+      margin-bottom: $Basics-16;
+      background-color: transparent;
+
+      &:hover {
+        color: var(--primary-color, $primary-color);
+      }
+    }
+  }
+}
+
+.sc-toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.sc-toc-title {
+  color: $neutral-50;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+.sc-toc-toggle {
+  background: none;
+  border: none;
+  color: $neutral-50;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+}
+
+.sc-toc-chip {
+  &.sc-toc-lvl-2 {
+  }
+
+  &.sc-toc-lvl-3 {
+    padding-left: 24px;
+  }
+}
+
+.sc-toc-chips-container {
+  gap: $Basics-16;
+}
+
+.sc-toc-chips-wrapper.collapsed .sc-toc-chips-container {
+  display: none;
+}

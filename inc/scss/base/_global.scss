@@ -1,0 +1,233 @@
+// _global.scss
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* ------------------------------
+   BODY
+------------------------------ */
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--body-font-family, $body-font-family);
+  font-size: $body-font-size;
+  line-height: var(--body-line-height, #{$body-line-height});
+  letter-spacing: var(--body-letter-spacing, #{$body-letter-spacing});
+  text-transform: var(--body-text-transform, $body-text-transform);
+  color: var(--body-text-color, $body-text-color);
+  background-color: var(--body-background-color, $body-background-color);
+}
+
+/* ------------------------------
+   EDITOR CLASSES
+------------------------------ */
+.aligncenter {
+  margin: 0 auto;
+}
+
+/* ------------------------------
+   LINKS
+------------------------------ */
+a {
+  color: var(--links-color, $links-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--links-hover-color, $links-hover-color);
+  }
+}
+
+/* ------------------------------
+   HEADINGS
+------------------------------ */
+
+/* H1 */
+h1 {
+  margin: 0 0 1em 0;
+  font-family: var(--h1-font-family, $h1-font-family);
+
+  font-size: $h1-font-size;
+
+  line-height: var(--h1-line-height, #{$h1-line-height});
+  letter-spacing: var(--h1-letter-spacing, #{$h1-letter-spacing});
+  text-transform: var(--h1-text-transform, $h1-text-transform);
+  color: var(--h1-color, $h1-color);
+}
+
+/* H2 */
+h2 {
+  margin: 0 0 1em 0;
+  font-family: var(--h2-font-family, $h2-font-family);
+
+  font-size: $h2-font-size;
+
+  line-height: var(--h2-line-height, #{$h2-line-height});
+  letter-spacing: var(--h2-letter-spacing, #{$h2-letter-spacing});
+  text-transform: var(--h2-text-transform, $h2-text-transform);
+  color: var(--h2-color, $h2-color);
+}
+
+/* H3 */
+h3 {
+  margin: 0 0 1em 0;
+  font-family: var(--h3-font-family, $h3-font-family);
+
+  font-size: $h3-font-size;
+
+  line-height: var(--h3-line-height, #{$h3-line-height});
+  letter-spacing: var(--h3-letter-spacing, #{$h3-letter-spacing});
+  text-transform: var(--h3-text-transform, $h3-text-transform);
+  color: var(--h3-color, $h3-color);
+}
+
+/* H4 */
+h4 {
+  margin: 0 0 1em 0;
+  font-family: var(--h4-font-family, $h4-font-family);
+
+  font-size: $h4-font-size;
+
+  line-height: var(--h4-line-height, #{$h4-line-height});
+  letter-spacing: var(--h4-letter-spacing, #{$h4-letter-spacing});
+  text-transform: var(--h4-text-transform, $h4-text-transform);
+  color: var(--h4-color, $h4-color);
+}
+
+/* ------------------------------
+   PARAGRAPH
+------------------------------ */
+p {
+  font-family: var(--body-font-family, $body-font-family);
+  font-size: $body-font-size;
+
+  line-height: var(--body-line-height, #{$body-line-height});
+  letter-spacing: var(--body-letter-spacing, #{$body-letter-spacing});
+  text-transform: var(--body-text-transform, $body-text-transform);
+  color: var(--body-text-color, $body-text-color);
+
+  a {
+    border-radius: var(--Basics-8, $Basics-8);
+    padding: 4px var(--Basics-8, $Basics-8);
+  }
+}
+
+/* ------------------------------
+   IMAGES
+------------------------------ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ------------------------------
+   UL / OL
+------------------------------ */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style: none;
+
+  li {
+    font-family: var(--body-font-family, $body-font-family);
+    font-size: $body-font-size;
+    line-height: var(--body-line-height, #{$body-line-height});
+    letter-spacing: var(--body-letter-spacing, #{$body-letter-spacing});
+    text-transform: var(--body-text-transform, $body-text-transform);
+    color: var(--body-text-color, $body-text-color);
+    position: relative;
+    padding-left: 24px;
+    margin: 6px 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='14' viewBox='0 0 16 14' fill='none'%3E%3Cpath d='M0.571533 8.77148L3.69153 12.7829C3.79681 12.9197 3.93172 13.0309 4.0861 13.1081C4.24049 13.1853 4.41037 13.2265 4.58296 13.2286C4.75278 13.2306 4.9209 13.1946 5.07511 13.1235C5.2293 13.0523 5.3657 12.9477 5.47439 12.8171L15.4287 0.771484' stroke='%23FFBD00' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      width: 16px;
+      height: 14px;
+    }
+  }
+}
+
+/* ------------------------------
+   CONTAINER / SECTION (mixins)
+------------------------------ */
+.container {
+  @include container;
+}
+
+section {
+  @include section;
+}
+
+/* ------------------------------
+   TABLE
+------------------------------ */
+.my-table-wrapper {
+  overflow-x: auto;
+  margin: 1em 0;
+  border: 1px solid var(--borders-color);
+  border-radius: $Basics-16;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scroll-bg-color, $scroll-bg-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-color, $scroll-color);
+    border-radius: 8px;
+    background-clip: padding-box;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+  th,td {
+    padding: 0.8em 1em;
+    border: 1px solid var(--borders-color);
+  }
+
+  img {
+    max-height: 24px;
+    margin-right: 0.5em;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.star {
+  color: #aaa;
+  margin-right: 0.1em;
+}
+
+.star.active {
+  color: #ffc107;
+}
+
+@media (max-width: 767px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}

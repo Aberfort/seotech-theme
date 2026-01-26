@@ -1,0 +1,76 @@
+@import 'inc/scss/base/variables.scss';
+
+.my-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.my-section {
+  display: flex;
+  gap: 24px;
+
+  //img {
+  //  width: 100%;
+  //}
+
+  &__col {
+    flex: 1;
+  }
+
+  &--1col {
+    .my-section__col1 {
+      flex: 1;
+    }
+  }
+
+  &--2col {
+    .my-section__col1,
+    .my-section__col2 {
+      flex: 1 1 50%;
+    }
+  }
+
+  &--3col {
+    .my-section__col1,
+    .my-section__col2,
+    .my-section__col3 {
+      flex: 1 1 33.3333%;
+    }
+  }
+
+  &--scroll {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--scroll-bg-color, $scroll-bg-color);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--scroll-color, $scroll-color);
+      border-radius: 8px;
+      background-clip: padding-box;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #8c9094;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .my-section {
+    flex-direction: column;
+
+    &--2col, &--3col {
+      .my-section__col {
+        flex: 1 1 auto;
+      }
+    }
+  }
+}

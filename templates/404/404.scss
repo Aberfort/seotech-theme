@@ -1,0 +1,100 @@
+main.page-404 {
+    min-height: 75vh;
+    background-color: #030508;
+    display: flex;
+    justify-content: center;
+    .container-404{
+        margin-top: 256px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 267px;
+        @media (max-width: 1600px){
+            margin-top: 175px;
+        }
+        @media (max-width: 1150px){
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        @media (max-width: 900px){
+            max-height: 150px;
+        }
+        @media (max-width: 767px){
+            flex-direction: column-reverse;
+            gap: 10px;
+            max-height: 190px;
+        }
+        .text-404{
+            h2{
+            font-family: var(--h2-font-family, "Open Sans", sans-serif);
+            font-size: 44px;
+            line-height: 120%;
+            color: #FFF;
+            text-align: left;
+            margin-bottom: 24px;
+            @media (max-width: 1150px){
+                font-size: 35px;
+                margin-bottom: 12px;
+            }
+            @media (max-width: 900px){
+                 font-size: 30px;
+            }
+            @media (max-width: 767px){
+                text-align: center;
+            }
+             @media (max-width: 425px){
+                font-size: 25px;
+             }
+        }
+        p{
+            font-family: var(--h2-font-family, "Open Sans", sans-serif);
+            font-size: 18px;
+            line-height: 140%;
+            color: #FFF;
+            text-align: left;
+            margin-bottom: 64px;
+            @media (max-width: 1150px){
+                font-size: 16px;
+                margin-bottom: 35px;
+            }
+            @media (max-width: 900px){
+                margin-bottom: 15px;
+            }
+            @media (max-width: 767px){
+                text-align: center;
+            }
+
+        }
+        a{
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            max-width: 328px;
+            justify-content: center;
+
+            .arrow-icon {
+            color: var(--btn-primary_text-color);
+            }
+            @media (max-width: 900px){
+                max-width: 290px;
+                padding: 14px;
+            }
+            @media (max-width: 767px){
+                margin: 0 auto;
+            }
+            @media (max-width: 425px){
+                padding: 12px;
+            }
+        }
+        }
+        .img-404{
+            img{
+                max-height: 367px;
+            @media (max-width: 1600px){
+                            max-height: 250px;
+        }
+            }
+        }
+    }
+}
